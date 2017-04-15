@@ -6,18 +6,15 @@ import java.util.List;
 /**
  * Created by YUNUS on 26.03.2017.
  */
-public class AlertContract
-{
-    public AlertContract(){
-        fields=new ArrayList<>();
-        methods=new ArrayList<>();
-    }
+public class AlertContract {
     private String alertType;
-
-
     private List<String> fields;
-
     private List<String> methods;
+
+    public AlertContract() {
+        fields = new ArrayList<>();
+        methods = new ArrayList<>();
+    }
 
     public String getAlertType() {
         return alertType;

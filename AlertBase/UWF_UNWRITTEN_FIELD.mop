@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 UWF_UNWRITTEN_FIELD
 {
-event UWF_UNWRITTEN_FIELD_event0 after : set(String org.jbook.source.Display.strFontName);
+event UWF_UNWRITTEN_FIELD_event0 after : set(@FIELDINFO);
 ltl: ![]UWF_UNWRITTEN_FIELD_event0;
 @Violation{System.out.println(UWF_UNWRITTEN_FIELD bug reported is FalsePositive);}
 }

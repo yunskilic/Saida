@@ -44,11 +44,13 @@ public class SaidaContract {
         return events;
     }
 
-    public void setEvents(List<Event> events){this.events=events;}
+    public void setEvents(List<Event> events) {
+        this.events = events;
+    }
 
-    public void addEvent(Event event){
-        if (getEvents()==null) {
-            setEvents(new ArrayList<Event>());
+    public void addEvent(Event event) {
+        if (getEvents() == null) {
+            setEvents(new ArrayList<>());
         }
         getEvents().add(event);
     }

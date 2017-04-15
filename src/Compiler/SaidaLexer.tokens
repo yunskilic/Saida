@@ -1,0 +1,9 @@
+T__0=1
+ViolationResult=2
+TemporalOp=3
+Event=4
+BasicEvent=5
+TemporalOrder=6
+Exception=7
+WS=8
+'.'=1

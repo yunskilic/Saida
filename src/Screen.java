@@ -1,6 +1,7 @@
 import Data.Constant;
 import Utils.Constants;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,18 +15,20 @@ public class Screen {
         this.constants=new Constants();
     }
 
-    public void AcceptInputs() {
+    public void AcceptInputs() throws IOException {
         String input;
         do {
             Scanner in = new Scanner(System.in);
-            input = in.next();
+            input = in.nextLine();
             if (!ValidateInputCount(input)) break;
             String[] inputCommands = input.split(constants.StringDivider);
             if (inputCommands[0].equals(constants.AddAlertCommand)){
-
+                AddAlert addAlert = new AddAlert();
+                addAlert.Create(inputCommands[1]);
             }
-            if (inputCommands[0].equals(constants.GenerateCommand)){
-
+            if (constants.Commands.contains(inputCommands[0])){
+                Generate generate = new Generate();
+                generate.Create(inputCommands[0],inputCommands[1]);
             }
         }
         while (input.toLowerCase().equals(constants.ExitCommand.toLowerCase()));

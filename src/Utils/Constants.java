@@ -12,13 +12,16 @@ public class Constants {
     public Constants(){
         this.Commands = new ArrayList<>();
         this.Commands.add(AddAlertCommand);
-        this.Commands.add(GenerateCommand);
+        this.Commands.add(FindBugsCommand);
+        this.Commands.add(PmdCommand);
     }
     public String ExitCommand = "Exit";
     public String AddAlertCommand = "Add";
-    public String GenerateCommand = "Generate";
+    public String FindBugsCommand = "FindBugs";
+    public String PmdCommand = "Pmd";
     public String StringDivider = " ";
     public int InputWordCount = 2;
     public List<String> Commands;
+    public static String OutputFolder = "AlertBase";
 
 }

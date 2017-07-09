@@ -1,8 +1,0 @@
-import java.io.*;
-import java.util.*;
-input
-{
-event input_event0 after : set(String org.jbook.source.Display.strFontName);
-ltl: ![]input_event0;
-@Violation{System.out.println(input bug reported is FalsePositive);}
-}
